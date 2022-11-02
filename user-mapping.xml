@@ -1,0 +1,93 @@
+<user-mapping>
+
+    <!-- Per-user authentication and config information -->
+
+    <!-- A user using md5 to hash the password
+         guacadmin user and its md5 hashed password below is used to
+             login to Guacamole Web UI-->
+    <!-- FIRST USER -->
+    <authorize
+            username="Orsi"
+            password="f04b6c00c02a6e3a2fa1bfb58973c0aa"
+            encoding="md5">
+
+        <!-- First authorized remote connection -->
+        <connection name="Seed-VM-01">
+            <protocol>vnc</protocol>
+            <param name="hostname">localhost</param>
+            <param name="port">5901</param>
+        </connection>
+
+        <!-- Second authorized remote connection -->
+        <connection name="Seed-VM-Test">
+            <protocol>vnc</protocol>
+            <param name="hostname">147.222.78.163</param>
+            <param name="port">5902</param>
+        </connection>
+
+    </authorize>
+
+<!-- SECOND USER -->
+
+    <authorize
+            username="TechAdmin"
+            password="password">
+
+
+        <!-- First authorized remote connection -->
+        <connection name="SEED Instructor - SSH">
+            <protocol>ssh</protocol>
+            <param name="hostname">192.168.1.12</param>
+            <param name="port">22</param>
+        </connection>
+
+        <!-- Second authorized remote connection -->
+        <connection name="SEED Instructor - VNC">
+            <protocol>vnc</protocol>
+            <param name="hostname">192.168.1.12</param>
+            <param name="port">5901</param>
+    </connection>
+
+        <!-- Third  authorized remote connection -->
+        <connection name="SEED Instructor - RDP">
+            <protocol>rdp</protocol>
+            <param name="hostname">192.168.1.12</param>
+            <param name="port">3389</param>
+    </connection>
+
+        <!-- Fourth authorized remote connection -->
+        <connection name="Local Machine">
+            <protocol>ssh</protocol>
+            <param name="hostname">192.168.1.1</param>
+        </connection>
+
+        <!-- Fifth authorized remote connection -->
+        <connection name="Local Machine RDP">
+                <protocol>rdp</protocol>
+                <param name="hostname">localhost</param>
+                <param name="port">3389</param>
+        </connection>
+
+        <connection name="Local Machine VNC">
+            <protocol>vnc</protocol>
+            <param name="hostname">192.168.1.1</param>
+            <param name="port">5901</param>
+        </connection>
+
+    </authorize>
+    <authorize
+        username="zhangy"
+        password="zhangy70488893">
+        <connection name="SEED Instructor - SSH">
+            <protocol>ssh</protocol>
+            <param name="hostname">192.168.1.12</param>
+            <param name="port">22</param>
+        </connection>
+        <connection name="SEED Instructor - RDP">
+            <protocol>rdp</protocol>
+            <param name="hostname">192.168.1.12</param>
+            <param name="port">3389</param>
+        </connection>
+    </authorize>
+
+</user-mapping>
