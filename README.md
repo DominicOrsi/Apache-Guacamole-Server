@@ -1,4 +1,4 @@
-# Apache-Guacamole-ServerA server that allows users to connect to another machine using their browser
+# Apache-Guacamole-Server A server that allows users to connect to another machine using their browser
 
 ## SetupRequirements:
 - Ubuntu 20.04 LTS
